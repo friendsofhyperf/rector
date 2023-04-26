@@ -12,7 +12,6 @@ return static function (RectorConfig $rectorConfig): void {
 
     $rectorConfig
         ->ruleWithConfiguration(RenameClassRector::class, [
-
             // Channel
             'Hyperf\Utils\Channel\Caller' => 'Hyperf\Coroutine\Channel\Caller',
             'Hyperf\Utils\Channel\ChannelManager' => 'Hyperf\Coroutine\Channel\Manager',
