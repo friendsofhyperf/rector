@@ -41,7 +41,6 @@ return static function (RectorConfig $rectorConfig): void {
             'Hyperf\Utils\Coordinator\CoordinatorManager' => 'Hyperf\Coordinator\CoordinatorManager',
 
             // Coroutine
-            'Hyperf\Utils\Coroutine' => 'Hyperf\Coroutine\Coroutine',
             'Hyperf\Utils\Coroutine\Concurrent' => 'Hyperf\Coroutine\Concurrent',
             'Hyperf\Utils\Coroutine\Locker' => 'Hyperf\Coroutine\Locker',
 
