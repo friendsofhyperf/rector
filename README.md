@@ -1,5 +1,10 @@
 # Rector Rules for Hyperf
 
+[![Latest Stable Version](https://poser.pugx.org/friendsofhyperf/rector/version.png)](https://packagist.org/packages/friendsofhyperf/rector)
+[![Total Downloads](https://poser.pugx.org/friendsofhyperf/rector/d/total.png)](https://packagist.org/packages/friendsofhyperf/rector)
+[![GitHub license](https://img.shields.io/github/license/friendsofhyperf/rector)](https://github.com/friendsofhyperf/rector)
+
+
 See available [Hyperf rules](/docs/rector_rules_overview.md)
 
 ## Install
