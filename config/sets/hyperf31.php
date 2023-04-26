@@ -115,21 +115,31 @@ return static function (RectorConfig $rectorConfig): void {
 
     $rectorConfig
         ->ruleWithConfiguration(RenameFunctionRector::class, [
+            'value' => 'Hyperf\Support\value',
+            'env' => 'Hyperf\Support\env',
+            'retry' => 'Hyperf\Support\retry',
+            'with' => 'Hyperf\Support\with',
             'collect' => 'Hyperf\Collection\collect',
             'data_fill' => 'Hyperf\Collection\data_fill',
             'data_get' => 'Hyperf\Collection\data_get',
             'data_set' => 'Hyperf\Collection\data_set',
-            'value' => 'Hyperf\Collection\value',
-
+            'head' => 'Hyperf\Collection\head',
+            'last' => 'Hyperf\Collection\last',
             'tap' => 'Hyperf\Tappable\tap',
-
+            'call' => 'Hyperf\Support\call',
+            'go' => 'Hyperf\Coroutine\go',
             'co' => 'Hyperf\Coroutine\co',
             'defer' => 'Hyperf\Coroutine\defer',
-            'go' => 'Hyperf\Coroutine\go',
+            'class_basename' => 'Hyperf\Support\class_basename',
+            'trait_uses_recursive' => 'Hyperf\Support\trait_uses_recursive',
+            'class_uses_recursive' => 'Hyperf\Support\class_uses_recursive',
+            'setter' => 'Hyperf\Support\setter',
+            'getter' => 'Hyperf\Support\getter',
             'parallel' => 'Hyperf\Coroutine\parallel',
+            'make' => 'Hyperf\Support\make',
             'run' => 'Hyperf\Coroutine\run',
+            'swoole_hook_flags' => 'Hyperf\Support\swoole_hook_flags',
+            'optional' => 'Hyperf\Support\optional',
             'wait' => 'Hyperf\Coroutine\wait',
-
-            'value' => 'Hyperf\Support\value',
         ]);
 };
