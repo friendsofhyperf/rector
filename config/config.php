@@ -14,7 +14,7 @@ return static function (RectorConfig $rectorConfig): void {
         ->autowire()
         ->autoconfigure();
 
-    $services->load('RectorHyperf\\', __DIR__ . '/../src')
+    $services->load('Rector\\Hyperf\\', __DIR__ . '/../src')
         ->exclude([__DIR__ . '/../src/{Rector,ValueObject}']);
 
     $services->set(RenameClassNonPhpRector::class);

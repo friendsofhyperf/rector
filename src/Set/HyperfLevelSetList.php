@@ -1,6 +1,6 @@
 <?php
 
-namespace RectorHyperf\Set;
+namespace Rector\Hyperf\Set;
 
 use Rector\Set\Contract\SetListInterface;
 

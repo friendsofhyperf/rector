@@ -4,14 +4,13 @@
 [![Total Downloads](https://poser.pugx.org/friendsofhyperf/rector/d/total.png)](https://packagist.org/packages/friendsofhyperf/rector)
 [![GitHub license](https://img.shields.io/github/license/friendsofhyperf/rector)](https://github.com/friendsofhyperf/rector)
 
-
 See available [Hyperf rules](/docs/rector_rules_overview.md)
 
 ## Install
 
 This package is a [Rector](https://github.com/rectorphp/rector) extension developed by the Hyperf community.
 
-Install the `RectorHyperf` package as dependency:
+Install the `Rector` package as dependency:
 
 ```bash
 composer require friendsofhyperf/rector --dev
@@ -19,10 +18,10 @@ composer require friendsofhyperf/rector --dev
 
 ## Use Sets
 
-To add a set to your config, use `RectorHyperf\Set\HyperfSetList` class and pick one of the constants:
+To add a set to your config, use `Rector\Hyperf\Set\HyperfSetList` class and pick one of the constants:
 
 ```php
-use RectorHyperf\Set\HyperfSetList;
+use Rector\Hyperf\Set\HyperfSetList;
 use Rector\Config\RectorConfig;
 
 return static function (RectorConfig $rectorConfig): void {

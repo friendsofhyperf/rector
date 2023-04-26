@@ -8,7 +8,7 @@ declare(strict_types=1);
  * @document https://github.com/friendsofhyperf/components/blob/3.x/README.md
  * @contact  huangdijia@gmail.com
  */
-namespace RectorHyperf\Set;
+namespace Rector\Hyperf\Set;
 
 use Rector\Set\Contract\SetListInterface;
 

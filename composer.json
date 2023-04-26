@@ -23,12 +23,12 @@
     },
     "autoload": {
         "psr-4": {
-            "RectorHyperf\\": "src"
+            "Rector\\Hyperf\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "RectorHyperf\\Tests\\": "tests"
+            "Rector\\Hyperf\\Tests\\": "tests"
         },
         "classmap": ["stubs"]
     },
