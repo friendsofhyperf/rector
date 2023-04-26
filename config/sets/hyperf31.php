@@ -4,14 +4,26 @@ declare(strict_types=1);
 
 use Rector\Config\RectorConfig;
 
+use Rector\Renaming\ValueObject\MethodCallRename;
 use Rector\Renaming\Rector\Name\RenameClassRector;
 use Rector\Renaming\Rector\FuncCall\RenameFunctionRector;
+use Rector\Renaming\Rector\MethodCall\RenameMethodRector;
 
 return static function (RectorConfig $rectorConfig): void {
     $rectorConfig->import(__DIR__ . '/../config.php');
 
     $rectorConfig
         ->ruleWithConfiguration(RenameClassRector::class, [
+            // AsyncQueue
+            'Hyperf\AsyncQueue\Message' => 'Hyperf\AsyncQueue\JobMessage',
+
+            // HttpMessage
+            'Hyperf\HttpMessage\Server\ConnectionInterface' => 'Hyperf\Engine\Contract\Http\Writable',
+            'Hyperf\HttpMessage\Server\Connection\SwooleConnection' => 'Hyperf\Engine\Http\WritableConnection',
+
+            // Redis
+            'Hyperf\Redis\ScanCaller' => 'Hyperf\Redis\Traits\ScanCaller',
+
             // Channel
             'Hyperf\Utils\Channel\Caller' => 'Hyperf\Coroutine\Channel\Caller',
             'Hyperf\Utils\Channel\ChannelManager' => 'Hyperf\Coroutine\Channel\Manager',
@@ -140,4 +152,22 @@ return static function (RectorConfig $rectorConfig): void {
             'optional' => 'Hyperf\Support\optional',
             'wait' => 'Hyperf\Coroutine\wait',
         ]);
+
+    $rectorConfig->ruleWithConfiguration(RenameMethodRector::class, [
+        new MethodCallRename(
+            'Hyperf\Dag\Dag',
+            'checkCircularDependences',
+            'checkCircularDependencies'
+        ),
+        // new MethodCallRename(
+        //     'Hyperf\DbConnection\Connection',
+        //     'isTransaction',
+        //     'transactionLevel'
+        // ),
+        new MethodCallRename(
+            'Hyperf\Testing\Client',
+            'init',
+            'initRequest'
+        ),
+    ]);
 };
