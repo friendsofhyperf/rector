@@ -19,6 +19,14 @@ return static function (RectorConfig $rectorConfig): void {
             'Hyperf\Utils\Coroutine\Concurrent' => 'Hyperf\Coroutine\Concurrent',
             'Hyperf\Utils\Str' => 'Hyperf\Stringable\Str',
             'Hyperf\Utils\Stringable' => 'Hyperf\Stringable\Stringable',
+
+            'Hyperf\Utils\Channel\Caller' => 'Hyperf\Coroutine\Channel\Caller',
+            'Hyperf\Utils\Channel\ChannelManager' => 'Hyperf\Coroutine\Channel\Manager',
+
+            'Hyperf\Utils\Codec\Base62' => 'Hyperf\Codec\Base62',
+            'Hyperf\Utils\Codec\Json' => 'Hyperf\Codec\Json',
+            'Hyperf\Utils\Codec\Xml' => 'Hyperf\Codec\Xml',
+            'Hyperf\Utils\CodeGen\Package' => 'Hyperf\CodeParser\Package',
         ]);
 
     $rectorConfig
@@ -37,5 +45,7 @@ return static function (RectorConfig $rectorConfig): void {
             'parallel' => 'Hyperf\Coroutine\parallel',
             'run' => 'Hyperf\Coroutine\run',
             'wait' => 'Hyperf\Coroutine\wait',
+
+            'value' => 'Hyperf\Support\value',
         ]);
 };
