@@ -10,7 +10,7 @@ See available [Hyperf rules](/docs/rector_rules_overview.md)
 
 This package is a [Rector](https://github.com/rectorphp/rector) extension developed by the Hyperf community.
 
-Install the `Rector` package as dependency:
+Install the package as dependency:
 
 ```bash
 composer require friendsofhyperf/rector --dev
