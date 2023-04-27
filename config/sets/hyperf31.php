@@ -17,6 +17,9 @@ return static function (RectorConfig $rectorConfig): void {
             // AsyncQueue
             'Hyperf\AsyncQueue\Message' => 'Hyperf\AsyncQueue\JobMessage',
 
+            // DbConnection
+            'Hyperf\DbConnection\Listener\CreatingListener' => 'Hyperf\DbConnection\Listener\InitUidOnCreatingListener',
+
             // HttpMessage
             'Hyperf\HttpMessage\Server\ConnectionInterface' => 'Hyperf\Engine\Contract\Http\Writable',
             'Hyperf\HttpMessage\Server\Connection\SwooleConnection' => 'Hyperf\Engine\Http\WritableConnection',
@@ -154,20 +157,9 @@ return static function (RectorConfig $rectorConfig): void {
         ]);
 
     $rectorConfig->ruleWithConfiguration(RenameMethodRector::class, [
-        new MethodCallRename(
-            'Hyperf\Dag\Dag',
-            'checkCircularDependences',
-            'checkCircularDependencies'
-        ),
-        // new MethodCallRename(
-        //     'Hyperf\DbConnection\Connection',
-        //     'isTransaction',
-        //     'transactionLevel'
-        // ),
-        new MethodCallRename(
-            'Hyperf\Testing\Client',
-            'init',
-            'initRequest'
-        ),
+        new MethodCallRename('Hyperf\Dag\Dag', 'checkCircularDependences', 'checkCircularDependencies'),
+        // new MethodCallRename('Hyperf\DbConnection\Connection', 'isTransaction', 'transactionLevel'),
+        new MethodCallRename('Hyperf\Testing\Client', 'init', 'initRequest'),
+        new MethodCallRename('Hyperf\Cache\CacheListenerCollector', 'getListner', 'getListener'),
     ]);
 };
