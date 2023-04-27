@@ -2,7 +2,7 @@
     "name": "friendsofhyperf/rector",
     "type": "rector-extension",
     "license": "MIT",
-    "description": "Rector upgrades rules for Laravel Framework",
+    "description": "Rector upgrades rules for Hyperf.",
     "require": {
         "php": ">=8.0",
         "rector/rector": "^0.15.12"
