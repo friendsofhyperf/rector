@@ -128,6 +128,7 @@ return static function (RectorConfig $rectorConfig): void {
 
     $rectorConfig
         ->ruleWithConfiguration(RenameFunctionRector::class, [
+            'config' => 'Hyperf\Config\config',
             'value' => 'Hyperf\Support\value',
             'env' => 'Hyperf\Support\env',
             'retry' => 'Hyperf\Support\retry',
