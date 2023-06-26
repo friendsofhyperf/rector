@@ -43,6 +43,11 @@ return static function (RectorConfig $rectorConfig): void {
             'Hyperf\Utils\CodeGen\PhpParser' => 'Hyperf\CodeParser\PhpParser',
             'Hyperf\Utils\CodeGen\Project' => 'Hyperf\CodeParser\Project',
 
+            // Command
+            'Hyperf\Command\ConfirmableTrait' => 'Hyperf\Command\Concerns\Confirmable',
+            'Hyperf\Command\DisableEventDispatcher' => 'Hyperf\Command\Concerns\DisableEventDispatcher',
+            'Hyperf\Command\NullDisableEventDispatcher' => 'Hyperf\Command\Concerns\NullDisableEventDispatcher',
+
             // Contracts
             'Hyperf\Utils\Contracts\Arrayable' => 'Hyperf\Contract\Arrayable',
             'Hyperf\Utils\Contracts\Jsonable' => 'Hyperf\Contract\Jsonable',
