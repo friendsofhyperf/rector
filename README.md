@@ -35,7 +35,7 @@ return static function (RectorConfig $rectorConfig): void {
 
 ## Run Rector
 
-src is your source directory, e.g. `src` or `app`:
+the source directory (e.g. `src`) is optional.
 
 ### 1. Dry Run - Preview Changes
 
