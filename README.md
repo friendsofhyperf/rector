@@ -33,6 +33,22 @@ return static function (RectorConfig $rectorConfig): void {
 
 <br>
 
+## Run Rector
+
+src is your source directory, e.g. `src` or `app`:
+
+### 1. Dry Run - Preview Changes
+
+```bash
+vendor/bin/rector process src --dry-run
+```
+
+### 2. Run Rector and Let It Change Your Code
+
+```bash
+vendor/bin/rector process src
+```
+
 ## Learn Rector Faster
 
 Rector is a tool that [we develop](https://getrector.org/) and share for free, so anyone can save hundreds of hours on refactoring. But not everyone has time to understand Rector and AST complexity. You have 2 ways to speed this process up:
