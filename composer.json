@@ -11,6 +11,7 @@
         "phpunit/phpunit": "^10.0",
         "phpstan/phpstan": "^1.8.2",
         "symplify/phpstan-rules": "^11.0",
+        "symplify/easy-coding-standard": "^11.0",
         "phpstan/extension-installer": "^1.1",
         "phpstan/phpstan-webmozart-assert": "^1.1",
         "phpstan/phpstan-strict-rules": "^1.2",
